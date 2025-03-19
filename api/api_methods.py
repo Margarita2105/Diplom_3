@@ -28,4 +28,3 @@ class ApiMethods:
         token = response.json()['accessToken']
         id_order = requests.post(urls.orders_api, json={"ingredients": ingredients}, headers={'Authorization': token}).json()['order']['number']
         return id_order
-
