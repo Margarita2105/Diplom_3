@@ -6,7 +6,7 @@ from locators.password_page_locators import Locators_password
 class PasswordPage(BasePage):
 
     def __init__(self, driver):
-        BasePage.__init__(self, driver)
+        super().__init__(driver)
 
     @allure.step('Находим на странице кнопку Восстановить пароль и переходим по ней.')
     def press_button_recover_password(self, locator, locator_text):

@@ -34,13 +34,6 @@ def browser(request):
     yield driver  # Передаем WebDriver в тест
     driver.quit()
 
-@pytest.fixture # фикстура, которая создает драйвер
-def driver():
-    driver = webdriver.Chrome()
-    yield  driver
-
-    driver.quit()
-
 @pytest.fixture
 def register():
     register = register_new_user_and_return_login_password()

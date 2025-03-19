@@ -1,7 +1,6 @@
 import allure
 
 from base_pages.base_page import BasePage
-import time
 from locators.basic_functionality_locators import Locators_functionality
 from tests.conftest import driver
 from locators.personal_account_locators import Locators_account
@@ -10,7 +9,7 @@ from locators.personal_account_locators import Locators_account
 class FunctionalityPage(BasePage):
 
     def __init__(self, driver):
-        BasePage.__init__(self, driver)
+        super().__init__(driver)
 
     @allure.step('Находим на странице нужную кнопку и переходим по ней.')
     def press_button(self, locator):
@@ -50,7 +49,7 @@ class FunctionalityPage(BasePage):
     def order_user(self, dry, element_from, element_to, place, cook, email, password):
         self.login(email, password)
         self.drag_and_drop(dry, element_from, element_to)
-        time.sleep(5)
+        self.wait_visibility_of_element(place)
         self.click_on_element(place)
         self.wait_visibility_of_element(cook)
 

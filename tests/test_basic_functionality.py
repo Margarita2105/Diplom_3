@@ -34,7 +34,7 @@ class TestFunctionality:
 
         assert order.press_button_ingredient(Locators_functionality.sous, Locators_functionality.card_ingredient) == "Детали ингредиента"
 
-    @allure.title('Закрываем карточку заказа.')  # декораторы
+    @allure.title('Закрываем карточку ингредиента.')  # декораторы
     @allure.description(
         'На странице ищем заказ, нажимаем, открывается карточка заказа, нажимаем на крестик, карточка заказа закрывается.')
     def test_press_exit_order(self, browser):

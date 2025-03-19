@@ -4,9 +4,8 @@ from locators.personal_account_locators import Locators_account
 import time
 
 class AccountPage(BasePage):
-
     def __init__(self, driver):
-        BasePage.__init__(self, driver)
+        super().__init__(driver)
 
     @allure.step('Находим на странице кнопку Личный кабинет и переходим по ней.')
     def press_button_personal_account(self, locator, locator_text):

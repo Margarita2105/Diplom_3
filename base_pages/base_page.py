@@ -34,8 +34,9 @@ class BasePage:
     def click_on_element(self, locator):
         if browser == 'chrome':
             self.find_element_on_page(locator).click()
-        element = self.find_element_on_page(locator)
-        self.driver.execute_script("arguments[0].click();", element)
+        else:
+            element = self.find_element_on_page(locator)
+            self.driver.execute_script("arguments[0].click();", element)
 
     @allure.step('Находим элемент на странице и нажимаем на него.')
     def click_on_element_firefox(self, locator):
