@@ -1,7 +1,6 @@
 import allure
 from base_pages.base_page import BasePage
 from locators.personal_account_locators import Locators_account
-import time
 
 class AccountPage(BasePage):
     def __init__(self, driver):
@@ -33,7 +32,6 @@ class AccountPage(BasePage):
     @allure.step('Переходим в раздел История заказов.')
     def order_history_focused(self):
         self.click_on_element(Locators_account.order_history)
-        time.sleep(1)
 
         return self.check_element_is_focused(Locators_account.order_history)
 
