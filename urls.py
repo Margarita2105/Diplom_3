@@ -1,0 +1,10 @@
+main_page = "https://stellarburgers.nomoreparties.site/"
+login_page = main_page+"login"
+forgot_password_page = main_page+"forgot-password"
+reset_password = main_page+"reset-password"
+order_feed = main_page+"feed"
+user_api = main_page + 'api/auth/register'
+login_user_api = main_page + 'api/auth/login'
+data_user_api = main_page + 'api/auth/user'
+orders_api = main_page + 'api/orders'
+orders_feed_user = main_page +'account/order-history'
